@@ -3,8 +3,9 @@ import { useId } from "react";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { nanoid } from "nanoid";
-import { addContact } from "../../redux/contacts/contactsSlice";
+// import { nanoid } from "nanoid";
+import { addContact } from "../../redux/contactsOps";
+// import { addContact } from "../../redux/contacts/contactsSlice";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const ContactForm = () => {
   const onAddProfile = (formData) => {
     const finalUser = {
       ...formData,
-      id: nanoid(),
+      // id: nanoid(),
     };
 
     const action = addContact(finalUser);
